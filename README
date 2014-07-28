@@ -4,3 +4,48 @@ NOTES:
 Attention ceci est un essai
 un test une reflexion
 rien n'est prevu pour la prod
+
+Essai a faire : 
+
+pour l'instant c'est du python 2.6 mais osf
+
+- fonction CREATE / DELETE FILE => creation de fichier HFS5
+- FILE par defaut
+- create GROUP
+- create dataset
+
+CREATE FILE 
+DROP FILE
+
+LIST/LS
+
+LIST FILE 
+LIST (group / dataset)
+LIST DATASET
+
+INSERT => insertion de donnee
+DELETE => suppression de données
+SEARCH => recherche
+
+Exemple de session :
+
+CREATE FILE SRA
+CREATE GROUP CLIENT, FOURN, PROSPECT, SRA
+CREATE GROUP SRA/BRON
+CREATE GROUP SRA/TOULOUSE
+
+CD SRA:/SRA/BRON
+
+CREATE DATASET LISTE_TELEPHONE ( id, NOM, POSTE )
+INSERT LISTE_TELEPHONE (,"CHRIS",117)
+INSERT LISTE_TELEPHONE (,"MICHEL",118)
+INSERT LISTE_TELEPHONE (,"FRB",120)
+
+LIST LISTE_TELEPHONE
+
+1   CHRIS   117
+2   MICHEL  118
+3   FRB     120
+
+SET LISTE_TELEPHONE DESCRIPTION=" Liste des postes internes"
+
