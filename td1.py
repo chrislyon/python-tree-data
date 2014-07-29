@@ -62,6 +62,9 @@ class TreeData(cmd.Cmd):
     def print_name(self, name):
         print "- %s " % name
 
+    def do_ls(self,line):
+        self.do_list(line)
+
     def do_list(self, line):
         if not DEFAULT_FILE:
             print "NO File"
