@@ -33,6 +33,12 @@ Ex: STORE /home/chris/images/lena.jpg /IMAGES/DIVERS/LENA
 
 GET : DATASET FICHIER
 
+CREATE DATASET <NAME> <MODELE>
+creation d'un dataset en fonction d'un modele pre defini
+
+CREATE MODELE <NAME> ( champ type, champ type, champ type ...)
+
+
 =======================
 Exemple de session :
 =======================
@@ -44,6 +50,7 @@ CREATE GROUP SRA/TOULOUSE
 
 CD SRA:/SRA/BRON
 
+CREATE MODELE LISTE_POSTE_TELEPHONE (id INTEGER, NOM CHAR30, POSTE INTEGER)
 CREATE DATASET LISTE_TELEPHONE ( id, NOM, POSTE )
 INSERT LISTE_TELEPHONE (,"CHRIS",117)
 INSERT LISTE_TELEPHONE (,"MICHEL",118)

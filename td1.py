@@ -1,5 +1,6 @@
 import cmd
 import h5py
+import numpy as np
 
 DEFAULT_FILE = None
 
@@ -81,10 +82,6 @@ class TreeData(cmd.Cmd):
 
     def help_list(self):
         self.pr_msg( "list / ls : liste le contenu du dossier" )
-
-    ## Exemple
-    def do_greet(self, line):
-        print "hello"
 
     def do_EOF(self, line):
         if DEFAULT_FILE is not None:
