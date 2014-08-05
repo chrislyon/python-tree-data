@@ -14,10 +14,10 @@ pour l'instant c'est du python 2.6 mais osf
 - create GROUP
 - create dataset
 
-CREATE FILE 
-DROP FILE
+CREATE FILE     Creation de fichiers HFS5
+DROP FILE       Suppression
 
-LIST/LS
+LIST/LS         List objet 
 
 LIST FILE 
 LIST (group / dataset)
@@ -27,7 +27,15 @@ INSERT => insertion de donnee
 DELETE => suppression de données
 SEARCH => recherche
 
+STORE : charge un fichier dans un dataset
+STORE FICHIER DATASET
+Ex: STORE /home/chris/images/lena.jpg /IMAGES/DIVERS/LENA
+
+GET : DATASET FICHIER
+
+=======================
 Exemple de session :
+=======================
 
 CREATE FILE SRA
 CREATE GROUP CLIENT, FOURN, PROSPECT, SRA
