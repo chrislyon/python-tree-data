@@ -1,8 +1,24 @@
+## ==================
+## TREE DATA PYTHON
+## ==================
+
+import os
 import cmd
 import h5py
 import numpy as np
 
 DEFAULT_FILE = None
+
+PARAMS = {}
+
+## parametre
+DIR_FILE='DIR_FILE'
+ROOT_DIR='ROOT_DIR'
+
+## Pour l'instant
+PARAMS[ROOT_DIR] = os.getcwd()
+PARAMS[DIR_FILE] = '/data'
+
 
 class TreeData(cmd.Cmd):
 
@@ -47,7 +63,8 @@ class TreeData(cmd.Cmd):
         modele = modele.upper()
         if modele == "FILE":
             self.pr_msg( "CREATE FILE %s " % name)
-            fname = "%s.hdf5" % name
+            dirname = '/'.join((PARAMS[ROOT_DIR], PARAMS[DIR_FILE]))
+            fname = os.path.abspath( '/'.join((dirname, ("%s.hdf5" % name) )))
             f = h5py.File(fname, "w")
             if DEFAULT_FILE is None:
                 DEFAULT_FILE = f
