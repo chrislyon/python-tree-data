@@ -6,5 +6,5 @@
 .PHONY: clean
 
 clean:
-	rm -f *.hdf5
-	rm -f *.pyc
+	find . -name "*.pyc" -exec rm -f {} \;
+	find . -name "test.hdf5" -exec rm -f {} \;
