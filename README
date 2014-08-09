@@ -65,3 +65,8 @@ LIST LISTE_TELEPHONE
 
 SET LISTE_TELEPHONE DESCRIPTION=" Liste des postes internes"
 
+MODELE :
+un module python
+que l'on appelle de la maniere suivante :
+
+import modeles.test.Liste_Tel as L (exemple)
