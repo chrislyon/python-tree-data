@@ -27,10 +27,16 @@ l.append()
 fic.close()
 
 ## Now lecture 
-fic = open_file(file_name, mode='w', title = "FICHIER DE TEST")
+fic = open_file(file_name, mode='r', title = "FICHIER DE TEST")
 
 print fic.root
 
 print fic.root.data.liste
+
+t = fic.root.data.liste
+print t
+
+for l in t.iterrows():
+	print l['idn'], l['nom'], l['tel']
 
 fic.close()
